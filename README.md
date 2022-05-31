@@ -30,7 +30,7 @@
 - Also add a public IP to the Azure Firewall Service
 <p align="center">
   
-<img src="https://user-images.githubusercontent.com/104326475/171256418-5737b235-652c-498d-970e-8e4fed3b807f.png" height="50%" width="50%" alt="firewall service"/>
+<img src="https://user-images.githubusercontent.com/104326475/171256418-5737b235-652c-498d-970e-8e4fed3b807f.png" height="70%" width="70%" alt="firewall service"/>
 
 <p/>
 

@@ -12,6 +12,10 @@
 - Can deploy the service across two or more availability zones
 - Can create network filtering rules
 
+# Use Case: Access the VM by RDP into the Azure Firewall Service on its public IP
+- Set up a vm and azure firewall service 
+- Add a DNAT rule to allow RDP into vm
+
 # Azure Firewall Service must have its own subnet. 
 - There must be enough IP address ranges for the subnets.
 - Name must be AzureFirewallSubnet
@@ -32,5 +36,77 @@
   
 <img src="https://user-images.githubusercontent.com/104326475/171256418-5737b235-652c-498d-970e-8e4fed3b807f.png" height="70%" width="70%" alt="firewall service"/>
 
+<p/> 
+
+# Add a DNAT rule within the Firewall Policy
+- Navigate to Firewall Service > Firewall Policy > DNAT rule > Add a rule collection
+- Source is the computer that will RDP into the Firewall Service.
+- I blurred my personal laptop's IP address.
+- Azure Firewall Service listens on port 4000
+- Destination is the public IP of the Azure Firewall Service
+- Translated Address is the demovm's private IP. Firewall Service will forward to request to that machine.
+- Translated port is 3389 since it is RDP
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/171262923-91a9ab04-b0a9-46d1-9e0d-1a2356eea9ec.png" height="270%" width="270%" alt="firewall service"/>
+
+<p/> 
+
+# RDP into Azure Firewall Service
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/171262401-65ccdac9-870c-4467-af56-be500f29f498.png" height="170%" width="170%" alt="firewall service"/>
+
+<p/> 
+
+
+# Successful RDP 
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/171262439-497169d3-d57f-4d4c-ada8-18d68ab725b5.png" height="70%" width="70%" alt="firewall service"/>
+
+<p/> 
+
+
+# Create the route table
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/171265006-0925c196-8465-4d82-bb3e-ede30ab2bfc1.png" height="40%" width="40%" alt="firewall service"/>
+
+<p/> 
+
+
+# How to route traffic through the firewall?
+- Use Route Table service
+- Associate the route table to the subnet that contains demovm
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/171265240-82216d23-3656-4ba1-9834-2d86e988990c.png" height="170%" width="170%" alt="firewall service"/>
+
 <p/>
+
+- This will allow admins to control traffic outbound to the internet within demovm
+- Any traffic that goes to the internet needs to go through the firewall appliance on its private IP
+- 0.0.0.0/0 is the internet
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/171265639-ebe4e733-b770-4ce5-a38b-1a9fe87dfcf5.png" height="170%" width="170%" alt="firewall service"/>
+
+<p/> 
+
+
+- Try accessing the internet now within demovm
+- Users will not be allowed because there isn't a application allow rule
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/171266451-1d93bc7f-66cf-4238-9c29-36d60604262b.png" height="170%" width="170%" alt="firewall service"/>
+
+<p/> 
+
+
 

@@ -15,6 +15,12 @@
 # Use Case: Access the VM by RDP into the Azure Firewall Service on its public IP
 - Set up a vm and azure firewall service 
 - Add a DNAT rule to allow RDP into vm
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/171281298-07af8ad3-a335-4288-ae36-273c9e2a49bd.png" height="80%" width="80%" alt="firewall service"/>
+
+<p/>
+
 
 # Azure Firewall Service must have its own subnet. 
 - There must be enough IP address ranges for the subnets.

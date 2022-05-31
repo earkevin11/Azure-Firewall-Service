@@ -97,6 +97,7 @@
 - This will allow admins to control traffic outbound to the internet within demovm
 - Any traffic that goes to the internet needs to go through the firewall appliance on its private IP
 - 0.0.0.0/0 is the internet
+- Next hop address is 10.0.1.4, which is the firewall appliance's private IP
 
 <p align="center">
   
@@ -106,7 +107,7 @@
 
 
 - Try accessing the internet now within demovm
-- Users will not be allowed because there isn't a application allow rule
+- Users will not be allowed because there isn't a application allow rule in the azure firewall service
 
 <p align="center">
   

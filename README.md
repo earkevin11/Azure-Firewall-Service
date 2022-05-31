@@ -109,4 +109,27 @@
 <p/> 
 
 
+# Application Rules
+- Use application rules when admins want to allow users to access fully qualified domain names
+- Source is the privateip of the demovm since we are trying to access the internet from the demovm.
+- HTTP, HTTPS because those are web pages that listen on port HTTP and HTTPS
 
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/171270684-2bfe0ae4-a32c-4e03-adcc-4d0e070adebb.png" height="250%" width="250%" alt="firewall service"/>
+
+<p/> 
+
+# Successful application rules to access google.com and microsoft.com
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/171271943-e4662fc3-3d54-4d5a-af97-e958e8b7bf49.png" height="250%" width="250%" alt="firewall service"/>
+
+<p/> 
+
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/171271959-4e8ec153-d4f3-4534-9be7-0fdf8c7e21c4.png" height="250%" width="250%" alt="firewall service"/>
+
+<p/> 

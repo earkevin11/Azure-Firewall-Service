@@ -66,12 +66,6 @@
 
 # RDP into Azure Firewall Service
 
-<p align="center">
-  
-<img src="https://user-images.githubusercontent.com/104326475/171262401-65ccdac9-870c-4467-af56-be500f29f498.png" height="170%" width="170%" alt="firewall service"/>
-
-<p/> 
-
 
 # Successful RDP 
 <p align="center">

@@ -2,7 +2,7 @@
 
 # What is Azure Firewall?
 - It is a managed, cloud-based service that protects the Azure Virtual Network resources.
-- It's fully stateful firewall-as-a-service.
+- It's fully stateful firewall-as-a-service, so it can distinguish legitimate packets for different types of connections.
 - By default, Azure Firewall blocks traffic.
 
 # Why would we use the Azure Firewall Service?

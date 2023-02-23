@@ -8,7 +8,7 @@
 # Why would we use the Azure Firewall Service?
 - Azure Firewall looks at inbound/outbound traffic and understand if they are secure requests.
 - Companies will use a Azure firewall to protect endpoints from attacks
-- All companies have some firewall mechanism. It filters traffic. Some have a firewall appliance and are responsible for the appliance.
+- All companies have some firewall mechanism. It <strong> FILTERS </strong> traffic. Some have a firewall appliance and are responsible for the appliance.
 - Azure firewall service, a managed service, can be used instead of physical appliance and can be installed on the Azure Virtual Network.
 
 

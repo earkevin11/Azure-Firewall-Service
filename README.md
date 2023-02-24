@@ -116,8 +116,9 @@
 
 
 # Application Rules
-- Use application rules when admins want to allow users to access fully qualified domain names (FQDN)
-- FQDN are complete addresses of websites, computers and other entities that can be accessed on the Internet.
+- For security reasons, it is important to control and limit outbound network access. For example, if you IT admins want to restrict employees accessing Facebook, Twitter, or inappropriate website, they can use Application Rules to limit the outbound IP addresses and ports that can be accessed.
+- Use Application Rules when the user case is to allow or restrict users to fully qualified domain names (FQDN) AKA full names of websites
+- As mentioned above, FQDN are complete addresses of websites, computers and other entities that can be accessed on the Internet.
 - - Example: www.Google.com
 - - "www" = Hostname , "Google" = Second-level domain , and "com" is the top-level domain
 - Source is the privateip of the demovm since we are trying to access the internet from the demovm.

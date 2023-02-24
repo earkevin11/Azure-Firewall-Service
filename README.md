@@ -119,7 +119,7 @@
 - Use application rules when admins want to allow users to access fully qualified domain names (FQDN)
 - FQDN are complete addresses of websites, computers and other entities that can be accessed on the Internet.
 - - Example: www.Google.com
-- - "www" = Hostname , "Google" = Secondleveldomain , and "com" is the top-level domain
+- - "www" = Hostname , "Google" = Second-level domain , and "com" is the top-level domain
 - Source is the privateip of the demovm since we are trying to access the internet from the demovm.
 - HTTP, HTTPS because those are web pages that listen on port HTTP and HTTPS
 
